@@ -7,5 +7,7 @@ int main(int argc, char const *argv[])
     
     ptr= (int *)malloc(sizeof(int) * 10); //allocating memory
     printf("Address =%d\n",*ptr);
+    
+    free(ptr); //free the allocated memory
     return 0;
 }
