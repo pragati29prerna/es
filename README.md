@@ -2,18 +2,18 @@
 
 ## DAY-1
 1) Tools 
-  -Typora
-  -Draw IO
-  -Shutter
+  - Typora
+  - Draw IO
+  - Shutter
 
 2) True vs.pseudo parallelism
 ## DAY-2
 1) Github
-   -git init
-   -git add .
-   -git commit -m "comment"
-   -git push 
-   -git status
+   - git init
+   - git add .
+   - git commit -m "comment"
+   - git push 
+   - git status
 
 2) Arithmatic opertaions
    - add()
