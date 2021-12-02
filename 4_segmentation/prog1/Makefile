@@ -5,4 +5,4 @@ seg:
 	$(CC) -o seg seg_fault.c
 
 clean:
-	  rm -rf * .o seg	
+	  rm -rf  seg	
