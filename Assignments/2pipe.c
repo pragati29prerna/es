@@ -1,13 +1,13 @@
 
+/*including standard header file*/
 #include <stdio.h>
-#include <string.h>
 /*including header files for open*/
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 /*including header file for write*/
 #include <unistd.h>
-/*including header files for exit*/
+/*including header file for close*/
 #include<stdlib.h>
 #define SIZE 16
 
