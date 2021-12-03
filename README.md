@@ -1,5 +1,4 @@
 # EMBEDDED OPERATION SYSTEM
-
 ## DAY-1
 1) Tools 
   - Typora
@@ -28,11 +27,11 @@
 3) File system
 4) ELF
 5) Program section
-    -.text
-    -.data
-    -.bss
-    - heap
-    - stack
+ - .text
+ - .data
+ - .bss
+ - heap
+ - stack
 ## DAY-4
 1) introduction to fork and PID
 ## DAY-5
@@ -42,27 +41,27 @@
  - User space
  2) Library call 
  3) System call
-    -open
-    -read
-    -write
-    -close
+   - open
+   - read
+   - write
+   - close
  3) system call interface
  4) Mode bits
  5) File descriptors
  ## DAY -6
  1) FORK API
-    -zombie state
-    -orphan state
+   - zombie state
+   - orphan state
  2)opaque data type
  3) Interprocess Communication (IPC)
-    -pipes
-    -FIFO's
+   - pipes
+   - FIFO's
 4) Process state diagram
-    -create
-    -ready
-    -running
-    -waiting
-    -exit
+   - create
+   - ready
+   - running
+   - waiting
+   - exit
 
 
 
