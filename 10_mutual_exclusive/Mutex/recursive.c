@@ -2,18 +2,18 @@
 /*including header file for thread*/
 #include <pthread.h>
 
-int count =10;
-pthread_mutex_t mutexCount;
-pthread_mutexattr_t mutexCountAttr;
+int count =10; //global variable count
+pthread_mutex_t mutexCount; //opaque datatype
+pthread_mutexattr_t mutexCountAttr; //set the attribute 
 
-void square()
+void square() //function decleration
 {
     printf("grabbing:function calling\n");
-    pthread_mutex_lock(&mutexCount);
+    pthread_mutex_lock(&mutexCount); //lock
     printf("calling funt:Inside mutex CS\n");
     count =count *count;
     printf("releasing:function calling\n");
-    pthread_mutex_unlock(&mutexCount);
+    pthread_mutex_unlock(&mutexCount);//unlock
 }
 
 void *inc_thread (void *arg) 
@@ -53,16 +53,16 @@ int main(int argc, char const *argv[])
 
     printf("Main thread: before calling thread\n");
 
-    pthread_mutexattr_init(&mutexCountAttr);
-    pthread_mutexattr_settype(&mutexCountAttr, PTHREAD_MUTEX_RECURSIVE);
+    pthread_mutexattr_init(&mutexCountAttr); //initalizing attribute
+    pthread_mutexattr_settype(&mutexCountAttr, PTHREAD_MUTEX_RECURSIVE); //set the type of mutex
 
-    pthread_mutex_init(&mutexCount,&mutexCountAttr);
+    pthread_mutex_init(&mutexCount,&mutexCountAttr);//initalizing mutex
     pthread_create(&incID,NULL,inc_thread,NULL); //calling a new thread
     pthread_create(&decID,NULL,dec_thread,NULL); //calling a new thread
 
     pthread_join(incID,NULL);
     pthread_join(decID,NULL);
-    pthread_mutex_destroy(&mutexCount);
+    pthread_mutex_destroy(&mutexCount); //destroy mutex
     printf("Main thread:After calling thread\n");
 
     return 0;
